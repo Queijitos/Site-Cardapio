@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h2 style="text-align: center" id="texto" >Empadinha</h2>
+       <style>
+       
+       </style>
+    </header>
+
+    <nav>
+        <div class="navbar-logo" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="#">Delivery</a>
+        </div>
+    </nav>
+    
+    <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()" aria-label="Fechar Sidebar">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre</a>
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const mainContent = document.getElementById("main-content");
+
+            const isSidebarOpen = sidebar.getAttribute("aria-expanded") === "true";
+
+            sidebar.style.width = isSidebarOpen ? "0" : "250px";
+            mainContent.classList.toggle('push-sidebar');
+
+            sidebar.setAttribute("aria-expanded", isSidebarOpen ? "false" : "true");
+        }
+        
+  
+
+    </script>
+</body>
+</html>
