@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-logo" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="#">Delivery</a>
+        </div>
+    </nav>
+    <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="#" class="close-btn" onclick="toggleSidebar()" aria-label="Fechar Sidebar">&times;</a>
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="cardapio.html" onclick="toggleSidebar()">Cardápio</a>
+        <a href="contato.html" onclick="toggleSidebar()">Contato</a>
+        <a href="sobre.html" onclick="toggleSidebar()">Sobre</a>
+    </div>
+    <div class="restaurant-list">
+        <div id="restaurant">
+            <h2>Restaurante Empadão</h2>
+            <p class="description">Descrição do Restaurante A: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div id="restaurant">
+            <h2>Restaurante enpinadinha</h2>
+            <p class="description">Descrição do Restaurante B: Ut euismod congue sapien id pellentesque.</p>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const isSidebarOpen = sidebar.getAttribute("aria-expanded") === "true";
+
+            sidebar.style.width = isSidebarOpen ? "0" : "250px";
+            sidebar.setAttribute("aria-expanded", isSidebarOpen ? "false" : "true");
+        }
+    </script>
+</body>
+</html>
