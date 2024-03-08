@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: Verdana, Geneva, Tahoma, sans-serif">Restaurante Exemplo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+
+
+
+
+</head>
+<body>
+
+    <header>
+        <h2 style="text-align: center" id="texto" >Empadinha</h2>
+       <style>
+       
+       </style>
+    </header>
+
+    <nav>
+        <div class="navbar-logo" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="#">Delivery</a>
+        </div>
+    </nav>
+    
+    <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()" aria-label="Fechar Sidebar">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre</a>
+    </div>
+
+    <h1 style="text-align: center;">Pratos Principais</h1>
+    <div class="main-content" id="main-content">
+        <section class="restaurant">
+            <div class="item">
+              <img src="imagens/lasanha.png" alt="Prato 1" id="animatedImage">
+              <h3>lasanha</h3>
+              <p>italiana, composto por camadas alternadas de massa de lasanha, molho de tomate, queijo ricota ou mussarela, carne moída ou legumes, cobertos com queijo ralado e assados no forno até ficarem dourados e borbulhantes.</p>
+            </div>
+            <div class="item">
+              <img src="imagens/pizza.jpg" alt="Prato 2" id="animatedImage">
+              <h3>Pizza</h3>
+              <p> italiana composta por uma base de massa de pão, geralmente redonda, coberta com molho de tomate, queijo derretido e uma variedade de ingredientes opcionais, como pepperoni, cogumelos, pimentões e outros condimentos, assada em forno.              </p>
+            </div>
+            <div class="item">
+              <img src="imagens/pao.png" id="animatedImage">
+              <h3></h3>Hamburguer
+              <p> é um sanduíche composto por um suculento hambúrguer grelhado, queijo derretido, alface fresca, tomate, cebola e molho especial, tudo servido em um pão de hambúrguer macio e tostado.</p>
+              <style>
+                .restaurant {
+    display: flex;
+  }
+  
+  .item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    left: -0%;
+  }
+  #animatedImage {
+  width: 378px; /* Ajuste conforme necessário */
+  transition: transform 0.3s ease-out;
+}
+
+#animatedImage:hover {
+  transform: scale(1.2); /* Ajuste conforme necessário */
+}
+
+  
+  h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  
+              </style>
+            </div>
+          </section>
+    </div>
+    <h1 style="text-align: center;">Bebidas</h1>
+    <div class="main-content" id="main-content">
+        <section class="restaurant">
+            <div class="item">
+              <img src="imagens/bebidas/bebida.png" alt="Prato 1" id="animatedImage">
+              <h3>  Coca-Cola</h3>
+              <p>popular e mundialmente conhecida, fabricada pela The Coca-Cola Company. Possui sabor único, caracterizado por uma mistura de ingredientes secretos, incluindo extrato de folha de coca e óleo de laranja. A bebida é consumida gelada e é famosa por sua efervescência e refrescância.</p>
+            </div>
+            <div class="item">
+              <img src="imagens/bebidas/bebida2.png" alt="Prato 2" id="animatedImage" style="width: 42%">
+              <h3>Heineken</h3>
+              <p>holandesa, produzida pela Heineken International. É uma cerveja tipo lager, conhecida por sua cor clara e sabor refrescante, com um leve amargor e aroma maltado. A Heineken é uma das cervejas mais populares e amplamente distribuídas em todo o mundo.</p>
+            </div>
+            <div class="item">
+              <img src="imagens/bebidas/bebida3.png" id="animatedImage">
+              <h3>MilkShake</h3>
+              <p>bebida cremosa e refrescante feita com sorvete, leite e diferentes sabores adicionais, como chocolate, baunilha, morango, entre outros. É geralmente servido gelado e pode ser decorado com chantilly, calda de chocolate ou frutas picadas, dependendo da preferência pessoal. O milkshake é uma opção popular em lanchonetes e restaurantes, especialmente durante os meses mais quentes.</p>
+            </div>
+        </section>
+        <h1 style="text-align: center;">Acompanhamentos</h1>
+        <div class="main-content" id="main-content">
+            <section class="restaurant">
+                <div class="item">
+                  <img src="imagens/cebola.png" alt="Prato 1" id="animatedImage">
+                  <h3>Onions Fritas</h3>
+                  <p> é um acompanhamento delicioso e crocante, feito com fatias de cebola empanadas e fritas até ficarem douradas e crocantes. Geralmente servidas como um petisco ou acompanhamento, as cebolas fritas do BK são conhecidas por seu sabor característico e textura crocante, sendo uma opção popular entre os clientes da rede.</p>
+                </div>
+                <div class="item">
+                  <img src="imagens/nuggets2.png" alt="Prato 2" id="animatedImage" style=" padding: 6%;">
+                  <h3>Nuggets</h3>
+                  <p>são petiscos crocantes e saborosos, feitos com pedaços de frango empanados e fritos até ficarem dourados e suculentos por dentro. Eles são frequentemente servidos com molhos de acompanhamento, como barbecue, mostarda ou ketchup, e são uma opção popular de lanche ou acompanhamento em refeições. Os nuggets do BK são apreciados por sua textura crocante por fora e macia por dentro, tornando-os uma escolha favorita para os amantes de fast food.</p>
+                </div>
+                <div class="item">
+                  <img src="imagens/batatinha.png" id="animatedImage" style="padding-top: 10%">
+                  <h3 style="margin-top: 20%">Batatinha 200g</h3>
+                  
+                  <p>conhecidas como "batatas fritas" ou "fries", são um acompanhamento clássico oferecido pela rede. Elas são fatias finas de batata cortadas em formato de palito, fritas até ficarem douradas e crocantes por fora, e macias por dentro. As batatas fritas do BK são geralmente temperadas com sal e podem ser apreciadas sozinhas ou como acompanhamento de sanduíches e outros itens do menu. Sua textura crocante e sabor delicioso as tornam uma opção popular entre os clientes.</p>
+                </div>
+            </section>
+            <h1 style="text-align: center;">Acompanhamentos</h1>
+        <div class="main-content" id="main-content">
+            <section class="restaurant">
+                <div class="item">
+                  <img src="imagens/sobremesa/sobremesa.png" alt="Prato 1" id="animatedImage" style="top: 20%;">
+                  <h3 style="margin-top: 38%">Bolo de CoCo</h3>
+                  <p>O bolo de coco é uma sobremesa deliciosa feita com uma massa fofa e aerada, geralmente preparada com farinha de trigo, ovos, açúcar, leite de coco e raspas de coco. Após assar no forno, o bolo é coberto com uma camada de glacê de coco ou polvilhado com mais coco ralado para intensificar o sabor e dar uma textura agradável. O bolo de coco é apreciado por seu sabor doce e tropical, sendo uma opção popular em diversas ocasiões e celebrações.</p>
+                </div>
+                <div class="item">
+                  <img src="imagens/sobremesa/sobremesa2.png" alt="Prato 2" id="animatedImage" style="top:20% ;">
+                  <h3 style="padding-top: 44%">Chocolates 250g </h3>
+                  <p>é um conjunto de pequenos chocolates de diferentes sabores e recheios, frequentemente apresentados em uma variedade de formas e cores. Cada bombom pode conter recheios diversos, como creme de avelã, trufa, caramelo, frutas, entre outros. As caixas de bombons são populares como presentes em datas especiais, como o Dia dos Namorados, Natal, aniversários e outras ocasiões festivas. Elas oferecem uma variedade de sabores para agradar diferentes gostos e são apreciadas por sua indulgência e diversidade de sabores.</p>
+                </div>
+                <div class="item">
+                  <img src="imagens/sobremesa/sobremesa3.png" id="animatedImage">
+                  <h3 style="margin-top: 13%">Sorvete de Casquinha</h3>
+                  <p>O sorvete de casquinha é uma sobremesa gelada e refrescante, servida em uma casquinha de sorvete crocante e comestível. Geralmente, o sorvete é uma mistura cremosa e saborosa, disponível em uma variedade de sabores, como baunilha, chocolate, morango, entre outros. A casquinha é feita de uma massa leve e crocante, muitas vezes aromatizada com baunilha ou cacau. O sorvete de casquinha é uma opção popular em sorveterias e carrinhos de rua, e é apreciado por crianças e adultos como uma deliciosa sobremesa para se refrescar.                  </p>
+                </div>
+            </section>
+
+            <footer style="top: 10%;" id="footer">
+              &copy; 2024 Restaurante Exemplo. Todos os direitos reservados.
+            </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const mainContent = document.getElementById("main-content");
+
+            const isSidebarOpen = sidebar.getAttribute("aria-expanded") === "true";
+
+            sidebar.style.width = isSidebarOpen ? "0" : "250px";
+            mainContent.classList.toggle('push-sidebar');
+
+            sidebar.setAttribute("aria-expanded", isSidebarOpen ? "false" : "true");
+        }
+        
+  
+
+    </script>
+</body>
+</html>
