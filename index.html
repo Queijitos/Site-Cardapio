@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="font-family: Verdana, Geneva, Tahoma, sans-serif">Restaurante Exemplo</title>
+  <link rel="websiteicon" type="png" href="icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src='main.js'></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="navbar-logo" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar-menu">
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="restaurantes.html">Restaurantes</a>
+      <a href="#">Delivery</a>
+    </div>
+  </nav>
+  <div class="carousel" style="background-color: #f5ebdc">
+    <div id="inicial1"><img src="imagens/carrocel.png" style="right: -9%"></div>
+    <div class="inicio22"><img src="imagens/carrocel2.png"></div>
+  </div>
+  <div id="mySidebar" class="sidebar" aria-expanded="false">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()" aria-label="Fechar Sidebar">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
+
+  <div class="main-content" id="main-content">
+    <section>
+      <h2>Ofertas Relampago</h2>
+
+      <div class="menu-item" id="animatedImage">
+        <span><a href=""><img src="imagens/relampago.png" style="left: -0%;"></a></span>
+        <UL>
+          <LI>HAMBURGUER 16,00$ <p style="color: red;"><a style="text-decoration: line-through;">23,00$</a></p></LI>
+        </UL>
+      </div>
+
+      <div class="menu-item" id="animatedImage">
+        <span><a href="#"><img src="imagens/relampago2.png" style="left: -0;"></a></span>
+        <ul>
+          <li>MILKSHAKE 7,00$ <p style="color: red;"><a style="text-decoration: line-through;">4,00$</a></p></li>
+        </ul>
+      </div>
+      <div class="menu-item" id="animatedImage">
+        <span><a href="#"><img src="imagens/batatinha.png" style="left: -0%;"></a></span>
+        <ul>
+          <li>Batatinha 7,50$ <p style="color: red"><a style="text-decoration: line-through">10,00$</a></p></li>
+        </ul>
+      </div>
+      <div class="menu-item" id="animatedImage">
+        <span><a href="#"><img src="imagens/nuggets.png" style="left: -0%"></a></span>
+        <ul>
+          <li>Nuggets 17,00$ <p style="color: red" ><a style="text-decoration: line-through">23,00$</a> </p> </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <footer style="margin-top:auto" id="footer">
+    &copy; 2024 Restaurante Exemplo. Todos os direitos reservados.
+  </footer>
+
+
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      const mainContent = document.getElementById("main-content");
+
+      const isSidebarOpen = sidebar.getAttribute("aria-expanded") === "true";
+
+      sidebar.style.width = isSidebarOpen ? "0" : "250px";
+      mainContent.classList.toggle('push-sidebar');
+
+      sidebar.setAttribute("aria-expanded", isSidebarOpen ? "false" : "true");
+    }
+    $(document).ready(function () {
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 2000, // Tempo em milissegundos entre os slides
+        dots: true, // Exibe pontos indicadores de navegação
+        // Adicione mais opções conforme necessário
+
+      });
+    });
+
+  </script>
+</body>
+
+</html>
